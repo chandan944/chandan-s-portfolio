@@ -1,8 +1,6 @@
-import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
-  // Smooth scroll function
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -11,55 +9,60 @@ const Footer = () => {
   };
 
   return (
-    <footer className="text-white py-8 px-[12vw] md:px-[7vw] lg:px-[20vw]">
-      <div className="container mx-auto text-center">
-        {/* Name / Logo */}
-        <h2 className="text-xl font-semibold text-purple-500">Tarun Kaushik</h2>
+    <footer className="w-full text-white bg-gradient-to-r from-[#1f1c2c] via-[#302b63] to-[#24243e] py-5 px-[7vw] font-sans">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Name */}
+        <h2 className="text-2xl font-bold text-purple-400 mb-2">Chandan Prajapati</h2>
 
-        {/* Navigation Links - Responsive */}
-        <nav className="flex flex-wrap justify-center space-x-4 sm:space-x-6 mt-4">
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap justify-center gap-4 mt-2 text-sm sm:text-base">
           {[
             { name: "About", id: "about" },
             { name: "Skills", id: "skills" },
-            { name: "Experience", id: "experience" },
             { name: "Projects", id: "projects" },
             { name: "Education", id: "education" },
           ].map((item, index) => (
             <button
               key={index}
               onClick={() => handleScroll(item.id)}
-              className="hover:text-purple-500 text-sm sm:text-base my-1"
+              className="text-gray-300 hover:text-purple-500 transition duration-300"
             >
               {item.name}
             </button>
           ))}
         </nav>
 
-        {/* Social Media Icons - Responsive */}
-        <div className="flex flex-wrap justify-center space-x-4 mt-6">
+        {/* Social Media */}
+        <div className="flex justify-center items-center gap-6 mt-3">
           {[
-            { icon: <FaFacebook />, link: "https://www.facebook.com/tarun.kaushik.3511041/" },
-            { icon: <FaTwitter />, link: "https://twitter.com/CodingMaster6?s=09" },
-            { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/tarun-kaushik-553b441a4" },
-            { icon: <FaInstagram />, link: "https://www.instagram.com/coding_.master/" },
-            { icon: <FaYoutube />, link: "https://www.youtube.com/codingmasteryt" },
-            
+            {
+              icon: <FaLinkedin />,
+              link: "https://www.linkedin.com/in/chandan-prajapati7/",
+            },
+            {
+              icon: <FaInstagram />,
+              link: "https://www.instagram.com/chandan._.prajapati/",
+            },
+            {
+              icon: <FaGithub />,
+              link: "https://github.com/chandan944",
+            },
           ].map((item, index) => (
             <a
               key={index}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-purple-500 transition-transform transform hover:scale-110"
+              className="text-xl text-gray-300 hover:text-purple-500 transition transform hover:scale-110"
             >
               {item.icon}
             </a>
           ))}
         </div>
 
-        {/* Copyright Text */}
-        <p className="text-sm text-gray-400 mt-6">
-          © 2025 Tarun Kaushik. All rights reserved.
+        {/* Copyright */}
+        <p className="text-gray-500 mt-8 text-sm">
+          &copy; {new Date().getFullYear()} Chandan Prajapati. All rights reserved.
         </p>
       </div>
     </footer>

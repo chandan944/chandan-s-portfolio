@@ -1,8 +1,7 @@
-import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
+// import Experience from "./components/Experience/Experience";
 import Work from "./components/Work/Work";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
@@ -11,7 +10,7 @@ import BlurBlob from './components/BlurBlob';
 
 const App = () => {
   return (
-    <div className="bg-[#050414]">
+    <div className="bg-[#111111]">
 
        <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
 
@@ -21,7 +20,7 @@ const App = () => {
         <Navbar />
         <About />
         <Skills />
-        <Experience />
+        {/* <Experience /> */}
         <Work />
         <Education />
         <Contact />
