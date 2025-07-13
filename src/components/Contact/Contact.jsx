@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
+  const [, setIsSent] = useState(false);
 
   // 🧠 Form field states
   const [name, setName] = useState("");
@@ -64,7 +64,7 @@ const Contact = () => {
         <h2 className="text-4xl font-extrabold">📬 Contact Me</h2>
         <div className="w-24 h-1 bg-purple-500 mx-auto mt-4 rounded"></div>
         <p className="text-gray-300 mt-4 max-w-xl mx-auto text-base">
-          I’d love to hear from you — whether it's a collaboration, opportunity,
+          I’d love to hear from you — whether it&apos;s a collaboration, opportunity,
           or just a hello! 👋
         </p>
       </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                 : "cursor-not-allowed bg-gradient-to-r from-purple-600 to-pink-500 text-white "
             }`}
           >
-            {isFormValid ? "Send" : "..."}
+            {isFormValid ? "Send" : "Send"}
           </button>
         </form>
       </div>

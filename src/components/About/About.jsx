@@ -47,7 +47,7 @@ const About = () => {
             rel="noopener noreferrer"
             className="inline-block text-black py-3 px-8 rounded-full text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg hover:shadow-purple-800/50 transform hover:scale-105 transition duration-300"
           >
-            📄 DOWNLOAD CV
+            📄 DOWNLOAD Resume
           </a>
         </div>
 
